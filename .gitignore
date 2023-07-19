@@ -7,6 +7,7 @@
 #sadece .java ve .form uzantili dosyalari yuklemek yeterli (bu calismadi)
 !*.java
 !*.form
+!README.md
 *.md
 *.xml
 
