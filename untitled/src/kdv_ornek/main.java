@@ -1,4 +1,4 @@
-package temel_kavramlar_ve_degiskenler.kdv_ornek;
+package kdv_ornek;
 
 import java.util.Scanner;
 
