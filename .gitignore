@@ -1,0 +1,15 @@
+#tumunu gormezden gel
+*.*
+
+#.gitignore disinda tabi
+!.gitignore
+
+#sadece .java ve .form uzantili dosyalari yuklemek yeterli (bu calismadi)
+!*.java
+!*.form
+*.md
+*.xml
+
+#.java dosyalarinin oldugu dosya yolunu belirtelim
+!untitled/src/
+
