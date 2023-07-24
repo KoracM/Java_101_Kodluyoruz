@@ -1,4 +1,4 @@
-package not_ort_ornek;
+package temel_kavramlar_ve_degiskenler.pratikler.not_ort_ornek;
 /*
 1-mat   2-fizik     3-turkce    4-tarih     5-muzik
 derslerinin sinav puanlari kullanicidan alinip ort hesaplanacak

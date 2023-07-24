@@ -1,4 +1,4 @@
-package dik_ucgen_hipotenus_ornek;
+package temel_kavramlar_ve_degiskenler.pratikler.dik_ucgen_hipotenus_ornek;
 
 import java.util.Scanner;
 

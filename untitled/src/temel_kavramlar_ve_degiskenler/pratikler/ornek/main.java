@@ -1,4 +1,4 @@
-package ornek;
+package temel_kavramlar_ve_degiskenler.pratikler.ornek;
 
 import java.util.Scanner;
 

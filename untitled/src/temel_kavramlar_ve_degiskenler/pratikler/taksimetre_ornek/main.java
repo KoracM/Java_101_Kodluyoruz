@@ -1,4 +1,4 @@
-package taksimetre_ornek;
+package temel_kavramlar_ve_degiskenler.pratikler.taksimetre_ornek;
 
 /*Taksimetre Programı
         Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
