@@ -10,6 +10,7 @@
 !*.form
 #!untitled/src/temel_kavramlar_ve_degiskenler/README.md
 !README.md
+
 #*.md
 *.xml
 
