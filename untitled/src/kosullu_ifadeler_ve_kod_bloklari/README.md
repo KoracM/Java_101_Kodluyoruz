@@ -66,3 +66,40 @@ kaldınız, geçtiyse de geçtiniz yazdıran kod.
 >* If number is even and in the inclusive range of 6 to 20, print **"Weird"**
 >* If number is even and greater than 20, print **"Not Weird**"
 ---
+
+## *Ödev 1* - Uçak Bileti Fiyatı Hesaplama
+>Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın. Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın. Mesafe başına ücret 0,10 TL / km olarak alın. İlk olarak uçuşun toplam fiyatını hesaplayın ve sonrasında ki koşullara göre müşteriye aşağıdaki indirimleri uygulayın:
+> * Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olmalıdır. Aksi takdirde kullanıcıya "Hatalı Veri Girdiniz !" şeklinde bir uyarı verilmelidir.
+> * Kişi 12 yaşından küçükse bilet fiyatı üzerinden %50 indirim uygulanır.
+> * Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden %10 indirim uygulanır.
+> * Kişi 65 yaşından büyük ise bilet fiyatı üzerinden %30 indirim uygulanır.
+> * Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %20 indirim uygulanır.
+---
+## *Ödev 2* - Çin Zodyağı Hesaplama
+> **Çin Zodyağı:** 4000 bin yıldır kullanılan bir astroloji çeşididir Çin astrolojisi ve insanları 12 değişik burç ve sembollerle tanımlar. Çin Zodyağı bu 12 burcun eşit aralıklarla(10 derece genişliğinde) sıralandığı bir hayvan halkasıdır ve yıldızlarla pek bir ilgisi yoktur.
+
+> **Çin Zodyağı nasıl hesaplanır?:** Çin zodyağı hesaplanırken kişinin doğum yılının 12 ile bölümünde kalana göre bulunur.  
+> * Doğum Tarihi %12 = 0 ➜ Maymun
+> * Doğum Tarihi %12 = 1 ➜ Horoz
+> * Doğum Tarihi %12 = 2 ➜ Köpek
+> * Doğum Tarihi %12 = 3 ➜ Domuz
+> * Doğum Tarihi %12 = 4 ➜ Fare
+> * Doğum Tarihi %12 = 5 ➜ Öküz
+> * Doğum Tarihi %12 = 6 ➜ Kaplan
+> * Doğum Tarihi %12 = 7 ➜ Tavşan
+> * Doğum Tarihi %12 = 8 ➜ Ejderha
+> * Doğum Tarihi %12 = 9 ➜ Yılan
+> * Doğum Tarihi %12 = 10 ➜ At
+> * Doğum Tarihi %12 = 11 ➜ Koyun
+---
+
+## *Ödev 3* - Artık Yıl Hesaplama
+
+ **Artık Yıl Nasıl Hesaplanır?:**  
+
+> 1- Genel bir kural olarak, artık yıllar 4 rakamının katı olan yıllardır:
+> * 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024 gibi.  
+
+> 2- 4'ün katı olmalarının dışında eğer ki 100'ün katıysa ve sadece 400'e bölünebilen yıllar artık yıllardır.
+> * Örneğin 1200, 1600, 2000 yılları artık yıldır ancak 1700, 1800 ve 1900 artık yıl değildir.
+---

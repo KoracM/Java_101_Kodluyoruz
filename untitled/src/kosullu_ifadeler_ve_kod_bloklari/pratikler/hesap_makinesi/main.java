@@ -7,9 +7,9 @@ public class main {
         Scanner input = new Scanner(System.in);
         int choose=-1;
         while(choose!=0){
-            System.out.print("\nInsert the 1st number: ");
+            System.out.print("\nEnter the 1st number: ");
             float number1 = input.nextInt();
-            System.out.print("Insert the 2nd number: ");
+            System.out.print("Enter the 2nd number: ");
             float number2 = input.nextInt();
             System.out.println("\n[1]-Addition\n[2]-Substraction\n[3]-Multiplication\n[4]-Division\n[0]-Exit\n");
             System.out.print("Which transaction will be done?: ");

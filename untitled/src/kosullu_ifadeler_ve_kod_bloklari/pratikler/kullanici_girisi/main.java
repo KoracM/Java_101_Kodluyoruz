@@ -21,7 +21,7 @@ public class main {
             System.out.print("Username or password is wrong!\nWould you like to reset password? (Y/N) :");
             password_reset_choose=input.next().toUpperCase();
             if(password_reset_choose.equals("Y")){
-                System.out.print("Insert the new password: ");
+                System.out.print("Enter the new password: ");
                 password=input.next();
                 System.out.println("Password has been changed :)\t"+password);
             }

@@ -6,7 +6,7 @@ public class main {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         int n;
-        System.out.print("Insert the number: ");
+        System.out.print("Enter the number: ");
         n=input.nextInt();
 
         if(n%2==0){
