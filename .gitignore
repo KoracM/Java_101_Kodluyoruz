@@ -15,3 +15,5 @@
 #.java dosyalarinin oldugu dosya yolunu belirtelim
 !untitled/src/
 
+#out
+out/
