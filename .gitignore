@@ -1,6 +1,6 @@
 #tumunu gormezden gel
 *.*
-*
+*/*
 
 #.gitignore disinda tabi
 !.gitignore
@@ -17,5 +17,5 @@
 #.java dosyalarinin oldugu dosya yolunu belirtelim
 !untitled/src/
 
-#out
-untitled/out/
+
+
