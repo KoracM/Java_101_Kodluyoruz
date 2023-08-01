@@ -1,4 +1,4 @@
-﻿# `JAVA 101 Kodluyoruz Pratikler`
+﻿# `JAVA 101 Kodluyoruz Pratikler ve Ödevler`
 
 ---
 # Koşullu İfadeler ve Kod Blokları
