@@ -17,9 +17,9 @@ public class Main {
         //odev
 
         int n,r,combination,n_fac=1,r_fac=1,n_r=1;
-        System.out.print("Calculate combination [C(n,r)=?] to enter variable n: ");
+        System.out.print("\nCalculate combination [C(n,r)=?] to enter variable n: ");
         n= input.nextInt();
-        System.out.print("\n[C(n,r)=?] enter the other variable r: ");
+        System.out.print("[C(n,r)=?] enter the other variable r: ");
         r= input.nextInt();
         for(int a=n, b=r,c=(n-r); a>=0 || b>=0 || c>=0 ;a--,b--,c--){
             if(a>0)

@@ -18,5 +18,13 @@ public class main {
             }
         }
         System.out.println("\n\nAvarage of number that can divided by 3 and 4 is: "+sumOfEvens/counter);
+        System.out.println("Even numbers between 0 -"+number+" with while:\n");
+        //while
+        int k=0;
+        while(k<=number){
+            if(k%2==0)
+                System.out.print(k+"\t");
+            k++;
+        }
     }
 }
