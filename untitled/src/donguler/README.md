@@ -58,7 +58,7 @@ int sum = 0,i=0,j=0;
 
 ---
 
-# `Pratikler ve Ödevler`
+# `Pratikler`
 
 ---
 # Döngüler
@@ -116,4 +116,154 @@ int sum = 0,i=0,j=0;
 
 >**Ödev:** Bir sayının basamak sayılarının toplamını hesaplayan program yazınız.  
 * Örnek : 1643 = 1 + 6 + 4 + 3 = 14
+---
+
+## *Pratik 7* - Harmonik Sayıları Bul
+>Harmonik seri formulü:  
+1+(1/2)+(1/3)+(1/4)+(1/n)...
+
+> **Örnek**:n=3 ise 1+(1/2)+(1/3) = 1.83
+---
+
+## *Pratik 8* - * ile Üçgen Çizme
+>' * ' kullanarak üçgen çizelim.
+>```java
+>     * 
+>    *** 
+>   ***** 
+>  ******* 
+> ********* 
+>***********
+>```
+
+> **Ödev:** ' * ' ile Elmas çiz
+>```java 
+>    *
+>   ***
+>  *****
+> *******
+>*********
+>*********
+> *******
+>  *****
+>   *** 
+>    *
+> ```
+---
+
+## *Pratik 9* - Basit ATM Projesi
+>### Özellikler:
+> * Kullanıcı ismi ve şifresi eşleşme kontrolü
+> * Kullanıcı 3 kere yanlış giriş yaparsa sistemden atılacak
+> * 4 adet işlem:
+> 1. Para yatırma
+> 2. Para çekme
+> 3. Bakiye sorgulama
+> 4. Çıkış
+> * Bakiyeden fazla miktarı çekme, 
+negatif değerler çekme ve yatırma gibi kontroller 
+
+> **Ödev:** Aynı işlemleri switch-case kullanarak yapınız.
+---
+## *Pratik 10* - EBOB-EKOK Bulan Program
+>EBOB : İki ya da daha fazla doğal sayının ortak bölenlerinin en büyüğüne bu sayıların en büyük ortak böleni, kısaca EBOB‘u denir.  
+>
+>* ÖRNEK: 18 ve 24 sayılarının en büyük ortak bölenini adım adım bulalım.
+>18’in bölenleri : 1, 2, 3, 6, 9, 18  
+>24’ün bölenleri : 1, 2, 3, 4, 6, 8, 12, 24  
+>Bu ortak bölenlerin en büyüğü **6 sayısı EBOB’tur.**
+
+>EKOK : İki ya da daha fazla doğal sayının ortak katlarının en küçüğüne bu sayıların en küçük ortak katı, kısaca EKOK‘u denir.
+>
+>* ÖRNEK: 6 ve 8 sayılarının en küçük ortak katını adım adım bulalım.
+>6’nın katları : 6, 12, 18, 24, 30, 36, 42, 48, …  
+>8’in katları : 8, 16, 24, 32, 40, 48, 56, 64, …  
+>Bu ortak katlardan en küçüğü **24 sayısı EKOK’tur.**
+
+>EKOK=(n1*n2) / EBOB
+---
+
+# `Ödevler`
+---
+## *Ödev 1* - Girilen Sayılardan Min-Max Değerlerini Bulma
+
+>Kaç adet sayı girileceğini kullanıcıdan alıp girilen sayılardan
+en büyüğünü ve en küçüğünü bulunuz.
+
+
+```java
+Örnek:
+        
+Kaç tane sayı gireceksiniz: 4
+        
+1. Sayıyı giriniz: 16
+2. Sayıyı giriniz: -22
+3. Sayıyı giriniz: -15
+4. Sayıyı giriniz: 100
+        
+En büyük sayı: 100
+En küçük sayı: -22
+```
+---
+## *Ödev 2* - Girilen Sayının Mükemmel Sayı Olup Olmadığını Bulunuz
+>**Mükemmel Sayılar:** Bir sayının kendisi hariç pozitif tam sayı çarpanları (kalansız bölen sayıların)
+> toplamı kendisine eşit olan sayıya mükemmel sayı denir.
+
+```java
+Örnek:
+        Bir sayı giriniz: 28
+        28 Mükemmel sayıdır
+        
+        Bir sayı giriniz: 1
+        1 Mükemmel sayı değildir.
+        
+        Bir sayı giriniz: 496
+        496 Mükemmel sayıdır
+```
+---
+## *Ödev 3* - ' * ' ile Ters Üçgen Çiziniz
+>Üçgenin yüksekliğini kullanıcıdan alınız.
+
+```java
+Enter the height of the triangle: 5
+
+*********
+ *******
+  *****
+   ***
+    *
+```
+---
+
+## *Ödev 4* - Belirli Aralıkta Asal Sayıları Ekrana Yazdırınız
+>Kullanıcıdan 0-? aralığını alıp bu aralıktaki asal sayıları yazdırınız.
+
+```java
+Araligi giriniz: 100
+        
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+```
+---
+## *Ödev 5* - Fibonacci Serisi
+>Kaç adet eleman olacağını kullanıcıdan alıp fibonacci serisini yazdırınız.
+
+```java
+8 Elemanlı Fibonacci Serisi : 0 1 1 2 3 5 8 13  
+
+        0 + 1 = 1
+
+        1 + 1 = 2
+
+        1 + 2 = 3
+
+        2 + 3 = 5
+
+        3 + 5 = 8
+
+        5 + 8 = 13
+
+        13 + 8 = 21
+
+        21 + 8 = 34
+```
 ---
