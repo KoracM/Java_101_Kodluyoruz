@@ -267,3 +267,56 @@ Araligi giriniz: 100
         21 + 8 = 34
 ```
 ---
+
+## *Ödev 6* - HackerRank Challenge 1 (Java Loops 1)
+Taken an integer N from user and print its first 10 multiples.
+
+(Kullanıcıdan integer n sayısı alınız ve 10'a kadar olan çarpımlarını yazdırınız.)
+
+Sample Input:
+>2
+ 
+Sample Output:
+>2 x 1 = 2  
+>2 x 2 = 4  
+>2 x 3 = 6  
+>2 x 4 = 8  
+>2 x 5 = 10  
+>2 x 6 = 12  
+>2 x 7 = 14  
+>2 x 8 = 16  
+>2 x 9 = 18  
+>2 x 10 = 20  
+---
+
+## *Ödev 7* - HackerRank Challenge 2 (Java Loops 2)
+Take the q (query amount),a,b and n (step) from user and print the results.
+
+>Formula: (a+2^0.b),(a+2^0.b+2^1.b),...,(a+2^0.b+2^1.b+...+2^(n-1).b)
+
+Sample Input:
+>2  
+>0 2 10  
+>5 3 5  
+> (2: querry number, then a,b,n. a=0, b=2, n=10)
+
+Sample Output:
+>2 6 14 30 62 126 254 510 1022 2046  
+>8 14 26 50 98
+
+Explaination:
+We have two queries:  
+1. We use a=0, b=2 and n=10 to produce some series S0,S1,...,Sn-1
+   * S0 = 0 + 1.2 = 0
+   * S1 = 0 + 1.2 + 2.2 = 6
+   * S2 = 0 + 1.2 + 2.2 + 4.2 = 14  
+   ... to the S9.  
+     
+
+2. We use a=5, b=3 and n=5 to produce some series S0,S1,...,Sn-1
+    * S0 = 5 + 1.3 = 8
+    * S1 = 5 + 1.3 + 2.3 = 14
+    * S2 = 5 + 1.3 + 2.3 + 4.3 = 26
+    * S3 = 5 + 1.3 + 2.3 + 4.3 + 8.3 = 50
+    * S4 = 5 + 1.3 + 2.3 + 4.3 + 8.3 + 16.3 = 98
+---
