@@ -168,3 +168,75 @@ int main(){
 Burada **'&'** işareti ile num değerinin adres değerini gönderiyoruz ve böylece num değişkene
 tamamen erişebiliyoruz bellek üzerinden.
 ---
+
+## Recursive Functions
+
+Fonksiyonların kendi kendilerini çağırmaları demektir.
+
+Bütün döngüleri recursive fonksiyonlar ile yazabiliriz. 
+Döngülere oranla daha anlaşılır, sade ve az kodla yazılması
+istenilenler recursive fonksiyonlar ile yazılabilir.
+
+```java
+import java.util.Scanner;
+
+public class a {
+    
+    static int f(int x){
+        if(x==0) return 0;
+        return x+f(x-1);
+    } 
+    
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.print("[n*(n+1)/2]\nEnter the n: ");
+        int number= input.nextInt();
+        System.out.println("Result: "+f(number));
+    }
+}
+```
+Yukarıdaki örnekte 3 değerini girelim sonuç:6 olacaktır. Adım adım incelersek
+### 1. **adım:** *f(3)*
+* x=3
+* x!=0
+* return 3+f(2) //burada tekrar f(2) çağrılır.
+### 2. **adım:** *f(2)*
+* x=2
+* x!=0
+* return 2+f(1)
+### 3. **adım:** *f(1)*
+* x=1
+* x!=0
+* return 1+f(0)
+### 4. **adım:** *f(0)*
+* x=0
+* x==0
+* return 0
+
+yani özetle ***f(3)=3+2+1+0=6***:
+* f(3)=3+f(2)
+* f(2)=2+f(1)
+* f(1)=1+f(0)
+* f(0)=0
+---
+
+# Pratikler
+
+## *Pratik 1* - Metot İle Palindrom Sayı Bulma
+>Palindromik sayı, iki taraftan okunduğu zaman okunuş yönüyle aynı olan sayılardır.
+>
+>Örnek: 1, 4, 8, 99, 101, 363, 4004, 9889....
+---
+## *Pratik 2* - Recursive ile Fibonacci Serisi Bulma
+> 0,1,1,2,3,5,8,13,21... şeklinde kendinden bir önceki sayıların toplamı şeklinde olan sayılardır.
+---
+## *Pratik 3* - Gelişmiş Hesap Makinesi
+Aşağıdaki fonksiyonlara sahip hesap makinesi yapınız:
+>1- Toplama İşlemi  
+>2- Çıkarma İşlemi  
+>3- Çarpma İşlemi  
+>4- Bölme işlemi  
+>5- Üslü Sayı Hesaplama  
+>6- Faktoriyel Hesaplama  
+>7- Mod Alma  
+>8- Dikdörtgen Alan ve Çevre Hesabı  
