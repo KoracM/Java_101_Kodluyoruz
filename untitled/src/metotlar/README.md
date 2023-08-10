@@ -240,3 +240,129 @@ Aşağıdaki fonksiyonlara sahip hesap makinesi yapınız:
 >6- Faktoriyel Hesaplama  
 >7- Mod Alma  
 >8- Dikdörtgen Alan ve Çevre Hesabı  
+---
+
+# Ödevler
+
+## *Ödev 1* - Recursive Metot İle Üslü Sayı 
+Üs alma işlemini döngü kullanmadan recursive metot ile yapınız.
+
+>Taban değeri giriniz : 2  
+>Üs değerini giriniz : 3  
+>Sonuç : 8   
+> 
+>Taban değeri giriniz : 5  
+>Üs değerini giriniz : 3  
+>Sonuç : 125  
+---
+## *Ödev 2* - Recursive Metot İle Asal Sayılar
+Girilen sayının asal olup olmadığını recursive metot kullanarak ekrana yazdırınız.
+
+>Sayı Giriniz : 22  
+>22 sayısı ASAL değildir !
+
+>Sayı Giriniz : 2  
+>2 sayısı ASALDIR !
+---
+## *Ödev 3* - Recursive Metot İle Desen
+Kullanıcıdan alınan sayı 0 veya negatif olana kadar 5 çıkarınız.  
+Sayı negatif veya 0 olduğunda ise tekrar sayının eski değerine gelene kadar 5 ekleyiniz.
+
+**Not:** Her işlem sonrası değeri ekrana yazdırınız.
+
+Örnek:
+>N Sayısı : 16  
+>Çıktısı : 16 11 6 1 -4 1 6 11 16 
+
+>N Sayısı : 5  
+>Çıktısı : 5 0 5 
+---
+## *Ödev 4* - HackerRank Java Method Overriding
+**Not:** Daha sınıf konusu, overriding işlenmemişken bu örnek çok saçma bir seçim olmuş.
+Daha önceden gördüğüm için yapabildim fakat yapılamaz ise can sıkılacak bir durum yok gayet normal.
+---
+Öncelikle sınıflar içerisinde değişkenleri, metotları vs tutabilirler. Miras alma ile bir sınıfın özellikleri başka sınıfa aktarılabilir.
+Hatta yeni türetilecek bir sınıf, ata sınıftan kendine ait özellikler de ekleyerek türeyebilir.   
+
+### Overriding işlemi nedir
+
+```java
+class Sports{
+    String getName(){
+        return "Generic Sports";
+    }
+    void getNumberOfTeamMembers(){
+        System.out.println( "Each team has n players in " + getName() );
+    }
+}
+//----------------------------------------------------------------------
+class Soccer extends Sports{
+    @Override
+    String getName(){
+        return "Soccer Class";
+    }
+    @Override
+    void getNumberOfTeamMembers(){
+        System.out.println( "Each team has 11 players in " + getName() );
+    }
+}
+```
+şekilde 2 adet sınıf bulunmakta:
+1. Sports sınıfı
+2. Sports sınıfından türetilmiş Soccer sınıfı.
+
+Soccer sınıfında görüldüğü üzere sports sınıfından aldığı getName() ve getNumberOfTeamMembers() isimli 2 metot değiştirilmiştir. İşte bu işleme overriding denir.  
+Tabi overriding yapabilmek için üst sınıftan miras alınan **metodun parametreleri ve geri dönüş tipi** değiştirilmemeli.  
+Buradaki metotların zaten parametleri yok ve değiştirilmemiş. Return tipleri de String kalmış sadece return değerleri değiştirilmiş.
+
+### HackerRank Challenge'i neydi?
+
+```java
+class Sports{
+    String getName(){
+        return "Generic Sports";
+    }
+    void getNumberOfTeamMembers(){
+        System.out.println( "Each team has n players in " + getName() );
+    }
+}
+
+class Soccer extends Sports{
+    @Override
+    String getName(){
+        return "Soccer Class";
+    }
+}
+```
+Yukarıdaki 2 sınıf verilmiş ve bizden:
+1. Soccer sınıfında, getNumberOfTeamMembers() metodunu override ederek n yerine 11 yazmamızı istiyor
+2. En sonunda çıktı olarak da bunu yazdırmamızı bekliyor:
+
+>Generic Sports  
+>Each team has n players in Generic Sports  
+>Soccer Class  
+>Each team has 11 players in Soccer Class  
+---
+
+### Çözümden bahsedelim biraz:
+Main metodu içerisinde
+
+```java
+Sports a=new Sports(); //ayni Scanner input=new Scanner(System.in); gibi
+
+System.out.println(a.getName());
+a.getNumberOfTeamMembers();
+```
+* Sports a=new Sports() ile Sports sınıfına ait bir a nesnesini oluşturuyoruz. Burada a yerine istediğinizi yazabilirsiniz. 
+Bu nesnenin ismini belirtir.  
+
+**New** 'den sonraki Sports ise içerisine parametre alabilir ya da almayabilir. Constructor method öğrenildiği zaman daha iyi anlaşılır.  
+Mesela Scanner sınıfında bir nesne oluşturduğumuzda **System.in** parametresini alıyordu. 
+
+Daha sonra oluşturduğumuz nesnenin metodunu kullanabilmek için nesne ismi yazıldıktan sonra **.** 'ya basılır. Zaten noktaya basılınca metot isimleri de gelir.
+
+Peki neden birinde sout ile ekrana yazdırıp diğerinde metot çağırdık. Çünkü getName metodu geriye bir String değer döndürüyor. Metot içerisinde sout ile ekrana yazdırabilirdi diğer metot gibi.
+
+Diğer metotda ise sout ile ekrana yazdırmıyoruz çünkü kendi içinde bir sout barındırıyor. Ama illa onu da yazdırmaya çalışırsak hata alırız çünkü yaptığımız void değer döndüren bir fonksiyonun değerini yazdırmak olur ki  
+Void boş, boşluk demektir. Yani geriye bir değer döndürmez.
+---
