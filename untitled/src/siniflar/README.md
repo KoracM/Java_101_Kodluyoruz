@@ -140,3 +140,38 @@ hasarda vuracaklardır.
 
 > **Ödev:** Hangi boksörün ilk başlayacağını %50 şans ile belirleyiniz.
 ---
+
+## *Ödev 1* - Maaş Hesaplama
+
+Kullanıcıdan aşağıdaki bilgiler alınacak:
+* isim
+* maaş
+* çalışma saati
+* işe alındığı yıl
+
+Daha sonra şu bilgiler hesaplanacaktır:
+* Çalışma saatine göre bonus
+    * 40 saatten fazla çalışmış ise saat başı 30tl
+* Şuanki maaşına göre vergi
+  * Şuanki maaşı 1000 TL'den fazla ise %3 kadar vergi, az ise 0 vergi.
+* Çalışma yılına göre maaş artışı
+  * 10 yıldan az süredir çalışıyorsa %5 zam
+  * 10-20 yıl arasında ise %10 zam
+  * 20 yıldan fazla ise %15 zam
+
+### Sınıfta olması gereken nitelikler:
+
+* name
+* salary
+* workHours
+* hireYear
+
+### Sınıfta olması gereken metotlar:
+
+* tax(): vergiyi hesaplayacak
+* bonus(): çalışma saatine göre bonus hesaplayacak
+* raiseSalary(): Başlangıç yılına göre zam hesaplayacak
+* toString(): Çalışan ait bilgileri ekrana yazdıracak. 
+**Not:** bu metot ismi String sınıfına ait toString() metodu ile karışabilir. Farklı isimlendirme verilebilir.
+
+---
