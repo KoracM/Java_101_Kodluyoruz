@@ -3,6 +3,26 @@
 ---
 # Temel Kavramlar ve Değişkenler
 
+**Not:**  Javada küçük harflerin ve büyük harflerin kullanımı 
+bazı şeyleri daha iyi açıklar.
+
+*Küçük harfle başlayanlar(camelCase):*
+* Metot ve değişken isimleri: 'calculateTotal', 'getUserInfo', 'itemCount'
+* Paket isimleri: 'com.example.utilities', 'org.myapp.helpers'
+
+*Büyük harfle başlayanlar(PascalCase):*
+* Sınıf isimleri: 'String', 'ArrayList', 'MyCustomClass'
+* Arayüz isimleri: 'Runnable', 'List', 'Drawable'
+
+*Tüm harfler büyük (UPPERCASE_SNAKE_CASE):*
+* Sabit (final) değişken isimleri: 'MAX_VALUE', 'PI', 'DEFAULT_TIMEOUT'
+
+**Örnek:**
+```java
+import java.util.Scanner;
+```
+Burada java bir pakettir. util ise onun altındaki bir pakettir. Scanner ise util paketinin altındaki bir sınıftır.
+
 ---
 ## *Pratik 1* - Not Ortalaması Hesaplayan Program
 

@@ -16,6 +16,9 @@
 
 #.java dosyalarinin oldugu dosya yolunu belirtelim
 !untitled/src/
+!untitled/src/diziler/img/
 
+#.gif vs gibi uzantılari gormesi icin
+!*.gif
 
 
