@@ -151,7 +151,7 @@ copyArray: [1, 55]
 
 Öncelikle **binary search** algoritması nedir?
 
-![binary_search_gif](/img/binary_search.gif)
+![binary_search_gif](img/binary_search.gif)
 
 1. Önce dizi sıralanır çünkü bu algoritma sıralanmış sayılar üzerinde çalışır.
 2. Hep ortanca değere bakılır bu şekilde aranan mesafe her seferinde yarıya bölüne bölüne ilerler.
