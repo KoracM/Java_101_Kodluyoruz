@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BasicArray {
-    void printArray(int[] array) {
+    public void printArray(int[] array) {
         System.out.print("\n[");
         for (int i = 0; i < array.length; i++) {
             if (i == array.length - 1)
@@ -15,7 +15,7 @@ public class BasicArray {
         System.out.print("]\n");
     }
 
-    static void printArrayY(int[] array) {
+    public static void printArrayY(int[] array) {
         System.out.print("\n[");
         for (int i = 0; i < array.length; i++) {
             if (i == array.length - 1)
@@ -26,14 +26,14 @@ public class BasicArray {
         System.out.print("]\n");
     }
 
-    int[] fill(int[] array, int value) {
+    public int[] fill(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             array[i] = value;
         }
         return array;
     }
 
-    int[] fill(int[] array, int start, int finish, int value) {
+    public int[] fill(int[] array, int start, int finish, int value) {
         //finish index does not include.
         for (int i = start; i < finish; i++) {
             array[i] = value;
@@ -41,7 +41,7 @@ public class BasicArray {
         return array;
     }
 
-    static int[] sort(int[] array) {
+    public static int[] sort(int[] array) {
         int temp;
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i + 1; j < array.length; j++) {
@@ -55,7 +55,7 @@ public class BasicArray {
         return array;
     }
 
-    int[] createRandomArray(int size, int start, int finish) {
+    public int[] createRandomArray(int size, int start, int finish) {
         Random r = new Random();
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
@@ -64,7 +64,7 @@ public class BasicArray {
         return array;
     }
 
-    int search(int[] array, int searching) {
+    public int search(int[] array, int searching) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == searching)
                 return i;
@@ -78,7 +78,7 @@ public class BasicArray {
 
         }
     }*/
-    boolean equals(int[] array1, int[] array2) {
+    public boolean equals(int[] array1, int[] array2) {
         if (array1.length != array2.length)
             return false;
 
@@ -89,7 +89,7 @@ public class BasicArray {
         return true;
     }
 
-    int[] copy(int[] array) {
+    public int[] copy(int[] array) {
         int[] copied = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             copied[i] = array[i];
@@ -97,7 +97,7 @@ public class BasicArray {
         return copied;
     }
 
-    int[] copy(int[] array, int finish) {
+    public int[] copy(int[] array, int finish) {
         int[] copied = new int[finish];
         for (int i = 0; i < finish; i++) {
             copied[i] = array[i];
@@ -105,7 +105,7 @@ public class BasicArray {
         return copied;
     }
 
-    int[] copy(int[] array, int start, int finish) {
+    public int[] copy(int[] array, int start, int finish) {
         int[] copied = new int[finish - start];
         for (int i = start, j = 0; i < finish && j < (finish - start); i++, j++) {
             copied[j] = array[i];
@@ -115,7 +115,7 @@ public class BasicArray {
 
     //binarySearch
     //The binary search algorithm has been understood but how to code it.
-    int binarySearch(int[] array, int searching) {
+    public int binarySearch(int[] array, int searching) {
         int status=-1, temp, l = array.length;
         array = BasicArray.sort(array);
         temp = l;
