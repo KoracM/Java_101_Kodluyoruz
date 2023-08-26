@@ -161,3 +161,78 @@ copyArray: [1, 55]
 Ortanca değer küçük büyük olma şartlarına göre sol parçaya ya da sağ parçaya ilerler ve bunu her adımda tekrarlar.
 
 ---
+
+# Pratikler
+
+## *Pratik 1* - Dizi Ortalamasını Hesaplayınız 
+
+>Ödev: Dizideki sayıların harmonik ortalamasını hesaplayan programı yazınız.  
+Harmonik Ortalama formülü : n (eleman sayısı) / elemanların harmonik serisi
+
+---
+
+## *Pratik 2* - Dizideki Max ve Min Değerlerini Bulunuz
+
+>Ödev: 
+>Dizideki elemanların girilen sayıdan küçük en yakın sayıyı ve en büyük en yakın sayıyı bulunuz.
+
+```java
+Dizi : {15,12,788,1,-1,-778,2,0}
+Girilen Sayı : 5
+Girilen sayıdan küçük en yakın sayı : 2
+Girilen sayıdan büyük en yakın sayı : 12
+```
+
+---
+## *Pratik 3* - Çok Boyutlu Diziler ile A Harfi Yazdıran
+
+>Ödev: Çok boyutlu diziler kullanılarak "yıldızlar" ile ekrana "B" harfi yazan programı yazınız.
+
+---
+
+## *Pratik 4* - Dizideki Tekrar Eden Sayıları Bulunuz
+
+>Ödev: Bir sayı dizisindeki tekrar eden çift sayıları belirten bir program yazınız
+
+---
+
+# Ödevler
+
+## *Ödev 1* - Dizideki elemanları küçükten büyüğe sıralaya
+
+---
+
+## *Ödev 2* - Dizideki Elemanların Frekanslarını Bulunuz
+
+---
+
+## *Ödev 3* - Çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan
+
+Matrisin transpozunu (devriğini) almak, matrisin aynı numaralı satırları ile sütunlarının yer değiştirmesi demektir. 
+Bu işlem sonucu elde edilen matris, başlangıçtaki matrisin transpozudur (devriğidir). 
+Bu aşamada kxn’lik bir matrisin transpozu (devriği) nxk’lik bir matris olur. 
+
+Örneğin bir A matrisimiz olsun. Bu A matrisinin transpozu (devriği), A^T (A üzeri T) ile gösterilir.
+
+```java
+Matris : 
+2    3    4    
+5    6    4    
+
+Transpoze : 
+2    5    
+3    6    
+4    4
+        
+        
+Matris :
+1    2    3
+4    5    6
+
+Transpoze :
+1    4
+2    5
+3    6   
+```
+
+---

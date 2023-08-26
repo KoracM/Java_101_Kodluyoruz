@@ -18,59 +18,54 @@ public class Solution {
         for (int i : a)
             System.out.print(i + " ");
     }
+
     //0 0 1 1  ->leap 2 i:2
     public static String checkWinOrNot(int[] a, int leap) {
-        int i=0,l=a.length;
-        boolean status=false;
-        while (i>=0){
-            if(i+leap<l && a[i+leap]==0){
-                i+=leap;
-                status=false;
-            }
-            else if (i+leap>l && a[i]==0 ) {
+        boolean status = false;
+        int i = 0, l = a.length;
+
+        while (i < l) {
+            //Check win or not
+            if (a[i] == 0 && ((i + 1 >= l) || (i + leap >= l)))
                 return "YES";
 
-            } else if(a[i]==0)
+                //If we can leap why not
+            else if (a[i] == 0 && a[i + leap] == 0)
+                i += leap;
+
+                //Continue to until 1
+            else if (!status && a[i] == 0 )
                 i++;
 
-            else{
-                status=true;
-                if(a[i-1]==1){
+                //If we bump into 1
+            else {
+                status = true;
+                i--;
+                if (i < 0 || a[i] == 1)
                     return "NO";
-                }
-                else if (a[i-1]==0) {
-                    i--;
-                }
-                else if(a[i+leap]==0)
-                    i+=leap;
 
-
+                else if ((i+leap<l) && (a[i] == 0) && (a[i + leap] == 0)) {
+                    i += leap;
+                    status = false;
+                }
             }
-            System.out.println("i: "+i);
         }
         return "NO";
-/*
-l=9 leap=4
-
-i:5
-i:4
-
- */
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Random r=new Random();
+        Random r = new Random();
 
         int query, size, leap;
         int[] game;
 
         query = input.nextInt();
 
-        for(int i=0;i<query;i++){
+        for (int i = 0; i < query; i++) {
             size = input.nextInt();
 //            size=r.nextInt(10-3+1)+3;
-            game=new int[size];
+            game = new int[size];
 //            leap=r.nextInt(10-1+1)+1;
             leap = input.nextInt();
 
@@ -78,8 +73,8 @@ i:4
             System.out.println("\n");
             printArray(game);
             System.out.print("\nleap: "+leap+"\t");*/
-            for(int j=0;j<size;j++)
-                game[j]=input.nextInt();
+            for (int j = 0; j < size; j++)
+                game[j] = input.nextInt();
 
             System.out.println(checkWinOrNot(game, leap));
         }
