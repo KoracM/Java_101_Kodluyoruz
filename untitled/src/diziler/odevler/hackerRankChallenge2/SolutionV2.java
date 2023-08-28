@@ -1,4 +1,4 @@
-package diziler.odevler.hackerRankChalenge2;
+package diziler.odevler.hackerRankChallenge2;
 
 import java.util.Scanner;
 public class SolutionV2 {
