@@ -27,7 +27,10 @@ public class finalSolution {
                 for (int j = 0; j < n; j++)
                     game[i] = scanner.nextInt();
 
+                long startTime = System.nanoTime();
                 System.out.println(canWin(leap, game, 0) ? "YES" : "NO");
+                long endTime = System.nanoTime();
+                System.out.println("Run time ns(nanoseconds): "+(endTime-startTime));
             }
             scanner.close();
         }

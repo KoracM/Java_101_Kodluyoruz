@@ -58,8 +58,10 @@ public class SolutionV2 {
 
             for (int j = 0; j < size; j++)
                 game[j] = input.nextInt();
-
+            long startTime = System.nanoTime();
             System.out.println(checkWinOrNot(game, leap));
+            long endTime = System.nanoTime();
+            System.out.println("Run time ns(nanoseconds): "+(endTime-startTime));
         }
     }
 }

@@ -20,5 +20,6 @@
 
 #.gif vs gibi uzantılari gormesi icin
 !*.gif
+!*.jpg
 
 
