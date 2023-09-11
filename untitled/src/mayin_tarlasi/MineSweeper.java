@@ -6,15 +6,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MineSweeper {
+    //Objects and variables
     Scanner input = new Scanner(System.in);
     public int size;
-
     public String[][] field;
     public String[][] fieldPlayer;
     public int[][] mines;
     public int[] guess;
     public int[][] corners = new int[4][2]; //corners[0]:left top   corners[1]:right top    corners[2]:right bottom   corners[3]:left bottom
 
+    //Methods
     private int[] getCoordinates(int size) {
         int[] c = new int[2];
         Random r = new Random();
@@ -265,11 +266,25 @@ public class MineSweeper {
         }
         return true;
     }
-
+    public boolean anotherGame(){
+        Scanner s=new Scanner(System.in);
+        byte choice;
+        boolean result;
+        while (true){
+        System.out.print("\n[1] - New Game\t[0] - Exit\n:");
+        choice=s.nextByte();
+        if(choice==1 || choice==0)
+            break;
+        else
+            System.out.println("Invalid value!");
+        }
+        result = choice != 0;
+        return result;
+    }
     public void run() {
-        int size;
+        byte mode;
+        int size,mine;
         int score = 0;
-        int mine;
 
         do {
             System.out.print("The minesweeper field size must be at least 3. Enter the size: ");
@@ -282,33 +297,53 @@ public class MineSweeper {
         this.mines = new int[(size * size) / 4][2];
         this.field = createField(size);
         this.fieldPlayer = createFieldPlayer(size);
-
-        System.out.println("Field:");
-        showField(field);
-        System.out.println("Player Field:");
-        showField(fieldPlayer);
-
-
         this.guess = new int[size * size];
+
         while (true) {
+            System.out.print("\n[1] - Admin Mode\t[0] - User Mode\nSelect a mode: ");
+            mode= input.nextByte();
+            if(mode==1){
+                System.out.println("\nField:");
+                showField(field);
+            }
+            else if (mode==0) {
+                System.out.println("\nPlayer Field:");
+                showField(fieldPlayer);
+            }
+            else {
+                System.out.println("Invalid mode!");
+                continue;
+            }
+
             if (isWin(this.field)) {
                 System.out.println("Tebrikler kazandınız!\nSkorunuz: " + score);
                 showField(field);
-                return;
+                break;
             }
-            System.out.print("x-y: ");
-            this.guess[0] = input.nextInt();
-            this.guess[1] = input.nextInt();
+            while(true){
+                System.out.print("x-y: ");
+                this.guess[0] = input.nextInt();
+                this.guess[1] = input.nextInt();
+                if( (guess[0]<0 || guess[0]>size-1) || (guess[1]<0 || guess[1]>size-1) )
+                    System.out.println("Invalid boundaries!");
+                else if(!Objects.equals(this.field[guess[0]][guess[1]], "-") && !Objects.equals(this.field[guess[0]][guess[1]], "x"))
+                    System.out.println("Bu pozisyonu daha once girdiniz zaten!");
+                else
+                    break;
+            }
+
             if (Objects.equals(this.field[guess[0]][guess[1]], "x")) {
                 showField(this.field);
                 System.out.println("Kaybettiniz!\nSkorunuz: " + score);
-                return;
+                break;
             }
             mine = howManyMinesNear(this.field, guess);
             score++;
             fieldUpdate(mine, guess);
-            System.out.println("Player Field:");
-            showField(fieldPlayer);
         }
+        if(anotherGame())
+            run();
+        else
+            System.out.println("Exited...");
     }
 }
